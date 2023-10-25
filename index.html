@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <h1>Calculadora</h1>
+
+  <main>
+    <div class="display" id="display">
+      <span id="display-value">0</span>
+      <span class="display-error-message" id="display-error-message">Equação inválida</span>
+    </div>
+
+    <div class="content">
+      <button id="7" onclick="getValue(this.id)" type="button" class="btn btn-secondary">7</button>
+      <button id="8" onclick="getValue(this.id)" type="button" class="btn btn-secondary">8</button>
+      <button id="9" onclick="getValue(this.id)" type="button" class="btn btn-secondary">9</button>
+      <button id="&lt;" onclick="handleDelete()" type="button" class="btn btn-primary">&lt;</button>
+      <button id="4" onclick="getValue(this.id)" type="button" class="btn btn-secondary">4</button>
+      <button id="5" onclick="getValue(this.id)" type="button" class="btn btn-secondary">5</button>
+      <button id="6" onclick="getValue(this.id)" type="button" class="btn btn-secondary">6</button>
+      <button id="+" onclick="getValue(this.id)" type="button" class="btn btn-secondary">+</button>
+      <button id="1" onclick="getValue(this.id)" type="button" class="btn btn-secondary">1</button>
+      <button id="2" onclick="getValue(this.id)" type="button" class="btn btn-secondary">2</button>
+      <button id="3" onclick="getValue(this.id)" type="button" class="btn btn-secondary">3</button>
+      <button id="-" onclick="getValue(this.id)" type="button" class="btn btn-secondary">-</button>
+      <button id="." onclick="getValue(this.id)" type="button" class="btn btn-secondary">.</button>
+      <button id="0" onclick="getValue(this.id)" type="button" class="btn btn-secondary">0</button>
+      <button id="/" onclick="getValue(this.id)" type="button" class="btn btn-secondary">&divide;</button>
+      <button id="*" onclick="getValue(this.id)" type="button" class="btn btn-secondary">x</button>
+      <button onclick="handleReset()" type="button" class="btn btn-primary btn-reset">Reset</button>
+      <button id="=" onclick="getResult()" type="button" class="btn btn-success btn-submit">=</button>
+    </div>
+  </main>
+  <footer><span>Feito por:   <a href="https://www.linkedin.com/in/nem%C3%A9sio-carlos-650960254/">Nemésio Carlos</a>
+  </span></footer>
+
+  <script src="./index.js"></script>
+  <script>
+    // Disable zoom in device mode
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
+    document.addEventListener('dblclick', function (event) {
+      event.preventDefault();
+    });
+  </script>
+</body>
+
+</html>
